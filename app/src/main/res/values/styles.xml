@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.AdminPanel">
+        <item name="android:imageButtonStyle">@style/green_btn</item>
+    </style>
+
+    <style name="green_btn" parent="Base.Widget.AppCompat.Button">
+        <item name="android:background">@drawable/green_btn</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="accent_btn" parent="Base.Widget.AppCompat.Button.Colored">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="red_btn" parent="Base.Widget.AppCompat.Button">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/red_btn</item>
+    </style>
+    <style name="fab_normal" parent="Widget.Design.FloatingActionButton">
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+    <style name="AppTheme.Translucent">
+    </style>
+
+    <style name="Widget.MyApp.HeaderBar.Spinner" parent="Widget.AppCompat.Light.Spinner.DropDown.ActionBar">
+        <item name="android:background">?android:selectableItemBackground</item>
+        <item name="android:dropDownSelector">?android:selectableItemBackground</item>
+        <item name="android:divider">@null</item>
+    </style>
+</resources>

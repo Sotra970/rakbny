@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.rakbny.Activity.AdminPanel">
+    <android.support.design.widget.AppBarLayout
+        android:elevation="@dimen/design_appbar_elevation"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.Toolbar
+                app:titleMarginStart="24dp"
+                app:logo="@drawable/tlogo"
+                app:title="Admin panel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <com.rakbny.Widget.FrameLayoutTouchListener
+                android:id="@+id/menu_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:onClick="go_to_settings"
+                    android:layout_marginRight="16dp"
+                    android:layout_gravity="center|right"
+                    android:src="@drawable/ic_person_white_24dp"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp" />
+            </com.rakbny.Widget.FrameLayoutTouchListener>
+
+        </FrameLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            layout="@layout/admin_user_section"/>
+        <include
+            layout="@layout/admin_bus_section"/>
+        <include layout="@layout/admin_schools_section"/>
+        <include layout="@layout/admin_user_d_section"/>
+    </LinearLayout>
+</ScrollView>
+
+
+    <FrameLayout
+        android:padding="24dp"
+        android:visibility="gone"
+        android:clickable="true"
+        android:id="@+id/input_container"
+        android:elevation="12dp"
+        android:background="@color/scrim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/cat_cont"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/input"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </android.support.design.widget.TextInputLayout>
+               <LinearLayout
+                   android:orientation="horizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+                   <Button
+                       style="@style/red_btn"
+                       android:layout_weight="1"
+                       android:id="@+id/Cancel"
+                       android:textColor="@android:color/white"
+                       android:text="Cancel"
+                       android:onClick="cancel"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content" />
+                   <Button
+                       style="@style/green_btn"
+                       android:layout_weight="1"
+                       android:id="@+id/Submit"
+                       android:textColor="@android:color/white"
+                       android:text="Submit"
+                       android:onClick="submit"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content" />
+               </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </FrameLayout>
+    <FrameLayout
+        android:visibility="gone"
+        android:clickable="true"
+        android:id="@+id/loadingSpinner"
+        android:elevation="12dp"
+        android:background="@color/scrim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_gravity="center"
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

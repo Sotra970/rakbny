@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Rakebny</string>
+    <string name="google_maps_web_services_key">AIzaSyCoHfNWYq_5G4AfPJPm_34gaw5FLprt4ho</string>
+    <string name="create_student">create student</string>
+    <string name="create_driver">create driver</string>
+    <string name="create_supervisor">create supervisor</string>
+    <string name="create_admin">create admin</string>
+
+    <string name="delete_student">delete student</string>
+    <string name="delete_driver">delete driver</string>
+    <string name="delete_supervisor">delete supervisor</string>
+    <string name="delete_admin">delete admin</string>
+
+
+    <string name="create_bus">create bus</string>
+    <string name="create_home_route">create home route</string>
+    <string name="create_school_route">create school route</string>
+    <string name="delete_user">delete user</string>
+    <string name="delete_bus">delete bus</string>
+    <string name="bus_location">bus location</string>
+    <string name="NoConnection">please check your internet connection and try agin</string>
+    <string name="delete_school">delete school</string>
+    <string name="create_school">create school</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="phone">Phone Number</string>
+    <string name="Password">Password</string>
+    <string name="Enter">Sign In</string>
+    <string name="register">Sign UP</string>
+    <string name="Enter_valid_Username">Enter Valid Username</string>
+    <string name="Enter_valid_PHONE">Enter Valid Phone</string>
+    <string name="Enter_valid_PASS">Enter Valid Password</string>
+    <string name="Enter_Match_PASS">password not match</string>
+    <string name="Username">Username</string>
+    <string name="Clint_phone">Phone Number</string>
+    <string name="Email">Email</string>
+    <string name="Serial">Serial</string>
+    <string name="Enter_valid_serial">Enter Valid Serial</string>
+    <string name="delete_parent">delete parent</string>
+    <string name="deactivate_bus">deactivate bus</string>
+    <string name="activate_bus">activate bus</string>
+    <string name="issue">issue</string>
+
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.rakbny.Activity.UsersActivity">
+    <android.support.design.widget.AppBarLayout
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+
+        <FrameLayout
+            android:background="@color/colorPrimary"
+            android:id="@+id/users_toolbar_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.Toolbar>
+
+            <ImageButton
+                android:onClick="delete_user_action_on_click"
+                android:id="@+id/delete_user_action"
+                android:visibility="visible"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="right|center"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_delete_forever_white_48dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:background="@color/background_light"
+            android:id="@+id/users_list"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingRight="24dp"
+            android:paddingLeft="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <FrameLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:visibility="visible"
+        android:background="@color/scrim"
+        android:clickable="true"
+        android:id="@+id/loadingSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_gravity="center"
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </FrameLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

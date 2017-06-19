@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:dividerPadding="4dp"
+    android:divider="@drawable/text_diver"
+    android:showDividers="middle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="16dp"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<TextView
+    android:text="1"
+    android:textSize="24sp"
+    android:id="@+id/ID"
+    android:layout_width="36dp"
+    android:layout_height="wrap_content" />
+<TextView
+    android:paddingLeft="8dp"
+    android:textAlignment="gravity"
+    android:text="Name"
+    android:textSize="24sp"
+    android:id="@+id/name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+</LinearLayout>

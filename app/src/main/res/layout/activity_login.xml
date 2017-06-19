@@ -1,0 +1,86 @@
+<FrameLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView
+            android:scaleType="fitXY"
+            android:layout_margin="16dp"
+            android:elevation="3dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:adjustViewBounds="true"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/logo"
+            android:maxHeight="240dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/input_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:inputType="textPassword"
+                android:id="@+id/input_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/Password" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            style="@style/green_btn"
+            android:id="@+id/btn_enter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Enter" />
+
+        <Button android:id="@+id/btn_register"
+            style="@style/accent_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/register" />
+    </LinearLayout>
+    <FrameLayout
+        android:visibility="gone"
+        android:clickable="true"
+        android:id="@+id/loadingSpinner"
+        android:elevation="12dp"
+        android:background="@color/scrim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_gravity="center"
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </FrameLayout>
+
+<FrameLayout
+    android:id="@+id/fragmentMAin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"></FrameLayout>
+
+</FrameLayout>

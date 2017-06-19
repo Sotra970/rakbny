@@ -1,0 +1,107 @@
+{
+  "project_info": {
+    "project_number": "642905892804",
+    "firebase_url": "https://rkbny-1476979776270.firebaseio.com",
+    "project_id": "rkbny-1476979776270",
+    "storage_bucket": "rkbny-1476979776270.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642905892804:android:27d689d63f1b7a06",
+        "android_client_info": {
+          "package_name": "com.google.samples.quickstart.signin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642905892804-5ardksrlpdjikncfoimv3d8e32dblicg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.google.samples.quickstart.signin",
+            "certificate_hash": "A4D2E4CF14AF4FCC407EFC1ED2288B829385E32D"
+          }
+        },
+        {
+          "client_id": "642905892804-110jalp0o7k9ofemovlt2t2ha89idkl2.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "642905892804-8bprutjp8s1h53f32l537s49p8rdas53.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqmron23J4ovr8NvdAkxbiC0p5MZtAJ5Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "642905892804-110jalp0o7k9ofemovlt2t2ha89idkl2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642905892804:android:41e6ceb13cdc144c",
+        "android_client_info": {
+          "package_name": "com.rakbny"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642905892804-vstr14gidgv12ebhvhj83p22o0kmaffh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rakbny",
+            "certificate_hash": "A4D2E4CF14AF4FCC407EFC1ED2288B829385E32D"
+          }
+        },
+        {
+          "client_id": "642905892804-110jalp0o7k9ofemovlt2t2ha89idkl2.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "642905892804-8bprutjp8s1h53f32l537s49p8rdas53.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqmron23J4ovr8NvdAkxbiC0p5MZtAJ5Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "642905892804-110jalp0o7k9ofemovlt2t2ha89idkl2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

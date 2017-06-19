@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rakbny">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".data.app.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.BusesActivity" />
+        <activity android:name=".Activity.Trace_Ride_Activity" />
+        <activity
+            android:name=".Activity.AdminPanel"
+            android:theme="@style/AppTheme.AdminPanel" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <!--
+ATTENTION: This was auto-generated to add Google Play services to your project for
+ App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".Activity.SchoolsActivity" />
+        <activity android:name=".Activity.LoginActivity" />
+        <activity android:name=".Activity.FollowerActivity" />
+        <activity
+            android:name=".Activity.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".fragments.SettingsActivity"
+            android:theme="@style/AppTheme.Translucent" />
+
+        <!-- [START firebase_service] -->
+        <service android:name=".data.FCM.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- [END firebase_service] -->
+        <!-- [START firebase_iid_service] -->
+        <service android:name=".data.FCM.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- [END firebase_iid_service] -->
+        <activity android:name=".Activity.Get_my_location_activity" />
+        <activity android:name=".Activity.Update_user" />
+        <activity android:name=".Activity.UsersActivity" />
+        <activity
+            android:name=".Activity.gpsAlertDailog"
+            android:theme="@style/AppTheme.Translucent" />
+        <activity
+            android:name=".Activity.adminn_bus_loc_map_activity"
+            android:theme="@style/AppTheme.Translucent" />
+        <activity android:name=".Activity.DeactivtedActivity" />
+        <activity android:name=".Activity.Contact_Us"></activity>
+    </application>
+
+</manifest>

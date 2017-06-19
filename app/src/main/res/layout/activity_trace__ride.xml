@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activity.Trace_Ride_Activity">
+    <android.support.design.widget.AppBarLayout
+        android:elevation="@dimen/design_appbar_elevation"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.Toolbar
+                app:title="@string/app_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <com.rakbny.Widget.FrameLayoutTouchListener
+                android:id="@+id/menu_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:onClick="go_to_settings"
+                    android:layout_marginRight="16dp"
+                    android:layout_gravity="center|right"
+                    android:src="@drawable/ic_person_white_24dp"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp" />
+            </com.rakbny.Widget.FrameLayoutTouchListener>
+
+        </FrameLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+<FrameLayout
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/map"
+            tools:context=".Activity.Trace_Ride_Activity"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+    </FrameLayout>
+    <ImageButton
+        android:visibility="gone"
+        android:elevation="6dp"
+        android:scaleY="0"
+        android:scaleX="0"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/delete"
+        android:src="@drawable/ic_cancel_white_36dp"
+        android:id="@+id/Cancel"
+        android:layout_width="56dp"
+        android:layout_height="56dp" />
+
+    <LinearLayout
+        android:id="@+id/fab_container"
+        android:padding="12dp"
+        android:gravity="right|bottom"
+        android:layout_marginBottom="24dp"
+        android:layout_marginRight="12dp"
+        android:layout_gravity="bottom|right"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp"
+            android:id="@+id/end_bus_tracking"
+            android:onClick="end_bus_tracking"
+            android:text="END TRIP"
+            android:textColor="@android:color/white"
+            android:visibility="invisible"
+            android:background="@drawable/end_trip"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+        <ImageButton
+            android:onClick="student_check_list"
+            android:elevation="6dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="visible"
+            android:background="@drawable/accent_circle"
+            android:src="@drawable/task"
+            android:id="@+id/students_check_list"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+        <FrameLayout
+            android:id="@+id/route_trace_layout"
+            android:layoutDirection="rtl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:paddingBottom="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:padding="6dp"
+                    android:visibility="gone"
+                    android:layout_marginRight="4dp"
+                    android:elevation="6dp"
+                    android:background="@drawable/blue_circle"
+                    android:src="@drawable/ic_home_white_36dp"
+                    android:id="@+id/home_dir"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp" />
+
+                <ImageView
+                    android:padding="6dp"
+                    android:visibility="gone"
+                    android:layout_marginRight="4dp"
+                    android:elevation="6dp"
+                    android:background="@drawable/accent_circle"
+                    android:src="@drawable/ic_school_white_36dp"
+                    android:id="@+id/school_dir"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp" />
+                <ImageButton
+                    android:elevation="6dp"
+                    android:background="@drawable/edit"
+                    android:src="@drawable/ic_track_changes_white_36dp"
+                    android:id="@+id/start_tracking"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp" />
+
+
+            </FrameLayout>
+            <ImageButton
+                android:layout_marginBottom="8dp"
+                android:elevation="6dp"
+                android:visibility="gone"
+                android:background="@drawable/edit"
+                android:src="@drawable/ic_done_white_36dp"
+                android:id="@+id/stop"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+        </FrameLayout>
+        <ImageButton
+            android:layout_marginBottom="8dp"
+            android:elevation="6dp"
+            android:background="@drawable/white_circle"
+            android:src="@drawable/ic_my_location_black_36dp"
+            android:id="@+id/current_location"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/progress_bar"
+        android:background="@color/scrim"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:padding="24dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ProgressBar
+                android:indeterminate="true"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="top|center"
+                style="?android:attr/progressBarStyleHorizontal"/>
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/trace_ride_splash_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/star_tip_container"
+            android:clickable="true"
+            android:background="@color/scrim"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ProgressBar
+            android:visibility="gone"
+            android:minHeight="96dp"
+            android:layout_gravity="center"
+            android:id="@+id/loading_raoad_progressBar"
+            style="?android:attr/absListViewStyle"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            />
+        <Button
+            android:id="@+id/start_bus_tracking"
+            android:onClick="start_bus_tracking"
+            android:text="START TRIP"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:background="@drawable/start_trip"
+            android:layout_width="72dp"
+            android:layout_height="72dp" />
+    </FrameLayout>
+
+</FrameLayout>
+<FrameLayout
+    android:elevation="@dimen/design_bottom_sheet_modal_elevation"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    app:behavior_peekHeight="12dp"
+    android:id="@+id/student_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <fragment
+        android:name="com.rakbny.fragments.StudentsFragment"
+        tools:layout="@layout/fragment_students"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></fragment>
+</FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

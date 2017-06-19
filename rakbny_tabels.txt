@@ -1,0 +1,53 @@
+
+CREATE TABLE IF NOT EXISTS `students` (
+  `student_id` int(11) NOT NULL ,
+  `f_parent_id` int(11) NOT NULL,
+  `s_parent_id` int(11) NOT NULL,
+  `bus_id` int(11) NOT NULL,
+  `staion_lat` text CHARACTER SET utf8 COLLATE utf8_bin,
+  `staion_lung` text CHARACTER SET utf8 COLLATE utf8_bin,
+  PRIMARY KEY (`student_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+CREATE TABLE IF NOT EXISTS `editors` (
+  `editor_id` int(11) NOT NULL ,
+   `bus_id`  int(11) NOT NULL,
+  `editor_type` text CHARACTER SET utf8 COLLATE utf8_bin ,
+  PRIMARY KEY (`editor_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `schools` (
+  `school_id` int(11) NOT NULL AUTO_INCREMENT ,
+  `school_name` text CHARACTER SET utf8 COLLATE utf8_bin ,
+  PRIMARY KEY (`school_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+
+CREATE TABLE IF NOT EXISTS `school_supervisor` (
+`school_supervisor_id` int(11) NOT NULL AUTO_INCREMENT ,
+  `school_id` int(11) NOT NULL  ,
+  PRIMARY KEY (`school_supervisor_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `buses` (
+  `bus_id` int(11) NOT NULL AUTO_INCREMENT,
+   `school_id` int(11) NOT NULL ,
+   `editor_id` int(11) ,
+   `editor_type` text CHARACTER SET utf8 COLLATE utf8_bin,
+   `last_edit_time` text CHARACTER SET utf8 COLLATE utf8_bin,
+  `current_lat` text CHARACTER SET utf8 COLLATE utf8_bin,
+  `current_lung` text CHARACTER SET utf8 COLLATE utf8_bin,
+  `home_lat` text CHARACTER SET utf8 COLLATE utf8_bin,
+  `home_lung` text CHARACTER SET utf8 COLLATE utf8_bin,
+  `away_lat` text CHARACTER SET utf8 COLLATE utf8_bin,
+  `away_lung` text CHARACTER SET utf8 COLLATE utf8_bin,
+  PRIMARY KEY (`bus_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `serial` (
+`serial_id` int(11) NOT NULL AUTO_INCREMENT ,
+`status` int(11) DEFAULT (0)  ,
+`status` int(11)   ,
+`user_type` text CHARACTER SET utf8 COLLATE utf8_bin,
+`serial` text CHARACTER SET utf8 COLLATE utf8_bin,
+  PRIMARY KEY (`school_supervisor_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
